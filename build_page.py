@@ -1,7 +1,7 @@
 """Genera index.html (página de ventas) a partir de head/tail existentes."""
 CK = 'https://mentora.ao/produto/20c544c8-2d06-4535-a9c5-ae4f6f6d821f'
-head = open('/tmp/head.html').read()
-tail = open('/tmp/tail.html').read()
+head = open('parts/head.html').read()
+tail = open('parts/tail.html').read()
 
 RED, DRED, GREEN, GOLD, CREAM, INK = '#A50E1E', '#6E0914', '#0B3B2A', '#D4A53A', '#FFF8EC', '#1A1A1A'
 H2 = 'margin: 0; font-size: clamp(23px, 6.4vw, 30px); line-height: 1.12; text-wrap: balance; text-align: center'
@@ -258,5 +258,8 @@ body = f'''
 </div>
 </div>
 '''
+import re
+names=iter(['hero','personajes','oferta','final','faq','sticky'])
+body=re.sub(r'<a class="buy', lambda m: f'<a data-pos="{next(names)}" class="buy', body)
 open('index.html', 'w').write(head + body + tail)
 print('ok', len(head + body + tail))

@@ -34,7 +34,7 @@ KITS = [
     (img('kit2.webp', 'Carta de Papá Noel y certificado'), 'Carta personalizada de Papá Noel',
      'Escribe el nombre de tu hijo directo en el PDF y luego imprime. Prepárate para ver su cara cuando la abra.',
      '3 cartas · 2 certificados · sobre del Polo Norte · boletos mágicos'),
-    (img('kit3.webp', 'Personajes navideños con espacio para foto'), 'Personajes con la cara de tu familia',
+    (img('familia.webp', 'Personajes navideños con las caras de la familia'), 'Personajes con la cara de tu familia',
      'Papá, mamá, los niños y hasta los abuelos convertidos en Papá Noel, duendes y renos.',
      '10 personajes en 2 tamaños + versiones para colorear'),
     (ADVENT, 'Calendario de adviento',
@@ -113,11 +113,16 @@ body = f'''
 <p style="margin: 0; font-size: clamp(17px, 4.6vw, 19px); line-height: 1.45; color: #FFE9E9"><strong style="color: #FFFFFF">+500 imprimibles navideños</strong> listos para usar:</p>
 <ul style="list-style: none; margin: 0; padding: 16px 14px; display: flex; flex-direction: column; gap: 11px; text-align: left; background: rgba(0,0,0,.18); border: 2px solid #E2B13C; border-radius: 16px; font-size: clamp(18px, 5vw, 21px); line-height: 1.3; font-weight: 800; color: #FFE08A">{hero_list}</ul>
 <p style="margin: 0; font-size: clamp(18px, 5vw, 21px); font-weight: 800; color: #FFFFFF">Compras hoy, imprimes hoy, lo usas hoy.</p>
-<div style="background: {CREAM}; border: 6px solid {GOLD}; border-radius: 18px; padding: 6px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px">
-<img src="kit2.webp" alt="Carta de Papá Noel y certificado impresos" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 12px; display: block">
-<img src="kit3.webp" alt="Personajes navideños para pegar la foto de la familia" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 12px; display: block">
-<img src="deco.webp" alt="Calendario de adviento de casitas y decoración" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 12px; display: block">
-<img src="kit1.webp" alt="Cajitas navideñas con dulces" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 12px; display: block">
+<div style="background: {CREAM}; border: 6px solid {GOLD}; border-radius: 18px; padding: 6px; display: flex; flex-direction: column; gap: 6px">
+<div style="position: relative">
+<img src="familia.webp" alt="Personajes navideños de papel con las caras de papá, mamá, los niños y la abuela" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 12px; display: block">
+<span style="position: absolute; left: 10px; right: 10px; bottom: 10px; background: {RED}; color: #FFFFFF; font-weight: 800; font-size: clamp(15px, 4.4vw, 18px); line-height: 1.25; padding: 9px 12px; border-radius: 10px; border: 2px solid #FFE08A">¡Tu familia convertida en personajes navideños!</span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px">
+<img src="kit3.webp" alt="Duende, reno y muñeco de nieve con caras de niños" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 10px; display: block">
+<img src="kit2.webp" alt="Carta de Papá Noel y certificado impresos" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 10px; display: block">
+<img src="deco.webp" alt="Calendario de adviento de casitas y decoración" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 10px; display: block">
+</div>
 </div>
 {btn('QUIERO MI KIT NAVIDEÑO POR US$&nbsp;4,90')}
 <p style="margin: 0; font-size: 14px; color: #FFE9E9">Acceso inmediato por email · Pago único · Garantía de 7 días</p>
@@ -140,11 +145,27 @@ body = f'''
 <p style="margin: 6px 0 0; font-size: 18px; font-weight: 800; color: {GREEN}">Imagina su carita cuando…</p>
 <div style="display: flex; flex-direction: column; gap: 10px; text-align: left">
 <div style="background: #FFFFFF; border: 2px solid #E9D6AE; border-radius: 12px; padding: 14px 16px; font-size: 16px; line-height: 1.45"><span style="color: {GOLD}">★</span> Abren una <strong>carta de Papá Noel con su nombre</strong> y su certificado de niño bueno</div>
-<div style="background: #FFFFFF; border: 2px solid #E9D6AE; border-radius: 12px; padding: 14px 16px; font-size: 16px; line-height: 1.45"><span style="color: {GOLD}">★</span> Se ven <strong>convertidos en duendes y renos</strong> con su propia foto</div>
+<div style="background: #FFFFFF; border: 2px solid #E9D6AE; border-radius: 12px; padding: 14px 16px; font-size: 16px; line-height: 1.45"><span style="color: {GOLD}">★</span> Se ven <strong>convertidos en duendes y renos con su propia cara</strong>, junto a papá, mamá y los abuelos</div>
 <div style="background: #FFFFFF; border: 2px solid #E9D6AE; border-radius: 12px; padding: 14px 16px; font-size: 16px; line-height: 1.45"><span style="color: {GOLD}">★</span> Abren una casita del <strong>calendario de adviento</strong> cada mañana</div>
 <div style="background: #FFFFFF; border: 2px solid #E9D6AE; border-radius: 12px; padding: 14px 16px; font-size: 16px; line-height: 1.45"><span style="color: {GOLD}">★</span> Reparten <strong>sus propios detalles</strong> a los amiguitos de la escuela</div>
 </div>
 </section>
+
+<!-- PERSONAJES SPOTLIGHT -->
+<section style="background: {RED}; color: #FFFFFF; {PAD}; display: flex; flex-direction: column; gap: 16px; text-align: center">
+<span style="align-self: center; background: #FFE08A; color: {INK}; font-weight: 800; font-size: 13px; padding: 6px 12px; border-radius: 999px">LO QUE MÁS AMAN LOS NIÑOS</span>
+<h2 style="{H2}">Papá, mamá, los niños y los abuelos… <span style="color: #FFE08A">convertidos en personajes navideños</span></h2>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+<img src="familia.webp" alt="Papá Noel, Mamá Noel, duende, reno y muñeco de nieve con las caras de la familia" style="grid-column: 1 / -1; width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 14px; border: 5px solid {GOLD}; display: block">
+<img src="kit3.webp" alt="Niños como duende, reno y muñeco de nieve" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 12px; border: 4px solid #FFFFFF; display: block">
+<div style="background: rgba(0,0,0,.2); border: 2px solid {GOLD}; border-radius: 12px; padding: 10px; display: flex; flex-direction: column; justify-content: center; gap: 6px; font-weight: 800; font-size: clamp(14px, 4vw, 16px); line-height: 1.3; text-align: left">
+<span>✂️ 1. Imprime el personaje</span><span>📸 2. Recorta la foto de su cara</span><span>✨ 3. Pégala ¡y listo!</span></div>
+</div>
+<p style="margin: 0; font-size: 16px; line-height: 1.55; color: #FFE9E9">10 personajes: <strong style="color: #FFFFFF">Papá Noel, Mamá Noel, duende, reno, muñeco de nieve, ángel, pingüino, galleta de jengibre, rey mago y pastorcito</strong>. En 2 tamaños y con versiones para colorear.</p>
+<p style="margin: 0; font-size: 18px; font-weight: 800; color: #FFE08A">Perfectos para el árbol, la puerta, la mesa de Nochebuena… ¡y para las fotos de la familia!</p>
+{btn('QUIERO CONVERTIR A MI FAMILIA EN PERSONAJES')}
+</section>
+<div class="cane"></div>
 
 <!-- 4. LO QUE RECIBES -->
 <section class="snowg" style="padding: 36px clamp(14px, 4.6vw, 20px); display: flex; flex-direction: column; gap: 14px">
@@ -197,6 +218,7 @@ body = f'''
 <section style="background: #F6EAD2; padding: 34px clamp(14px, 4.6vw, 20px); display: flex; flex-direction: column; gap: 12px">
 <h2 style="{H2}; color: {GREEN}">Así queda tu Navidad en casa</h2>
 <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+<figure style="grid-column: 1 / -1; margin: 0; display: flex; flex-direction: column; gap: 6px"><img src="familia.webp" alt="Personajes navideños con las caras de toda la familia" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 14px; border: 4px solid #FFFFFF; display: block"><figcaption style="font-size: 13px; line-height: 1.35; text-align: center; color: #4A4236">Toda la familia convertida en personajes</figcaption></figure>
 <figure style="margin: 0; display: flex; flex-direction: column; gap: 6px"><img src="deco.webp" alt="Sala decorada con letras Feliz Navidad y calendario de adviento de casitas de papel" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 14px; border: 4px solid #FFFFFF; display: block"><figcaption style="font-size: 13px; line-height: 1.35; text-align: center; color: #4A4236">Decoración y calendario de adviento</figcaption></figure>
 <figure style="margin: 0; display: flex; flex-direction: column; gap: 6px"><img src="actividades.webp" alt="Niños coloreando actividades navideñas impresas" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 14px; border: 4px solid #FFFFFF; display: block"><figcaption style="font-size: 13px; line-height: 1.35; text-align: center; color: #4A4236">Actividades lejos de las pantallas</figcaption></figure>
 </div>

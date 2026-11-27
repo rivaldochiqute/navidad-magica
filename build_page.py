@@ -93,13 +93,12 @@ hero_list = ''.join(check(t) for t in ['Carta de Papá Noel <u>con el nombre de 
 body = f'''
 <div class="snowg" style="font-family: Inter, system-ui, sans-serif; color: {INK}; width: 100%; padding-bottom: 40px">
 
-<div class="topbar" style="background: {GREEN}; color: #FFFFFF; padding: 10px 12px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; align-items: center; font-weight: 800; font-size: 14px">
-<span>LA NAVIDAD LLEGA EN:</span>
-<span style="background: {RED}; padding: 4px 8px; border-radius: 6px"><span class="cd-d">0</span>d</span>
-<span style="background: {RED}; padding: 4px 8px; border-radius: 6px"><span class="cd-h">0</span>h</span>
-<span style="background: {RED}; padding: 4px 8px; border-radius: 6px"><span class="cd-m">0</span>m</span>
-<span style="background: {RED}; padding: 4px 8px; border-radius: 6px"><span class="cd-s">0</span>s</span>
-<span style="color: #FFE08A">· EL 15/12 EL PRECIO SUBE A US$&nbsp;9,90</span>
+<div class="topbar" id="pricebar" style="background: {GREEN}; color: #FFFFFF; padding: 9px 8px; display: flex; flex-wrap: wrap; gap: 5px; justify-content: center; align-items: center; font-weight: 800; font-size: clamp(11.5px, 3.3vw, 14px)">
+<span style="white-space: nowrap">EL PRECIO SUBE A US$&nbsp;9,90 EN:</span>
+<span style="background: {RED}; padding: 3px 6px; border-radius: 6px; white-space: nowrap"><span class="pc-d">0</span>d</span>
+<span style="background: {RED}; padding: 3px 6px; border-radius: 6px; white-space: nowrap"><span class="pc-h">0</span>h</span>
+<span style="background: {RED}; padding: 3px 6px; border-radius: 6px; white-space: nowrap"><span class="pc-m">0</span>m</span>
+<span style="background: {RED}; padding: 3px 6px; border-radius: 6px; white-space: nowrap"><span class="pc-s">0</span>s</span>
 </div>
 <div class="cane"></div>
 
@@ -107,19 +106,21 @@ body = f'''
 
 <!-- 1. TOPO -->
 <section class="snow" style="color: #FFFFFF; padding: 0 clamp(14px, 4.6vw, 20px) 34px; display: flex; flex-direction: column; gap: 18px; text-align: center">
-<span style="align-self: center; margin-top: 14px; background: #FFE08A; color: {INK}; font-weight: 800; font-size: clamp(12.5px, 3.6vw, 14px); padding: 7px 12px; border-radius: 999px">🎄 MAMÁ, ANTES DE GASTAR UNA FORTUNA EN REGALOS…</span>
+<span style="align-self: center; margin-top: 14px; background: #FFE08A; color: {INK}; font-weight: 800; font-size: clamp(12.5px, 3.6vw, 14px); padding: 7px 12px; border-radius: 999px">🎄 MAMÁ, ANTES DE GASTAR UNA FORTUNA EN REGALOS, MIRA ESTO 👇</span>
 <h1 style="margin: 0; display: flex; flex-direction: column; gap: 4px; line-height: 1.04">
-<span style="font-family: 'Lilita One', sans-serif; font-size: clamp(36px, 10.6vw, 60px); color: #FFE08A; white-space: nowrap; text-shadow: 0 4px 0 #6E0914">+500 Imprimibles</span>
-<span style="font-size: clamp(24px, 7vw, 34px); text-wrap: balance">navideños para imprimir en casa por solo <span style="background: #12A150; padding: 0 8px; border-radius: 8px; white-space: nowrap">US$&nbsp;4,90</span></span>
+<span style="font-family: 'Lilita One', sans-serif; font-size: clamp(34px, 9.6vw, 54px); color: #FFE08A; text-wrap: balance; text-shadow: 0 4px 0 #6E0914">Convierte a tu familia en personajes navideños</span>
+<span style="font-size: clamp(21px, 6vw, 30px); text-wrap: balance">+500 imprimibles para imprimir en casa por solo <span style="background: #12A150; padding: 0 8px; border-radius: 8px; white-space: nowrap">US$&nbsp;4,90</span></span>
 </h1>
 <div style="position: relative; background: {CREAM}; border: 6px solid {GOLD}; border-radius: 20px; padding: 6px; display: flex; flex-direction: column; gap: 8px; box-shadow: 0 10px 0 rgba(0,0,0,.18)">
 <div style="position: relative">
 <img src="familia.webp" alt="Personajes navideños de papel con las caras de papá, mamá, los niños y la abuela" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 14px; display: block">
 <span style="position: absolute; top: -14px; left: -12px; width: clamp(84px, 24vw, 108px); height: clamp(84px, 24vw, 108px); border-radius: 50%; background: {GOLD}; color: {RED}; border: 4px solid #FFFFFF; display: flex; flex-direction: column; align-items: center; justify-content: center; transform: rotate(-12deg); box-shadow: 0 6px 14px rgba(0,0,0,.3); line-height: 1"><span style="font-family: 'Lilita One', sans-serif; font-size: clamp(26px, 7.4vw, 34px)">6 KITS</span><span style="font-size: clamp(10px, 2.8vw, 12px); font-weight: 800">+ BONO</span></span>
-<span style="position: absolute; left: 10px; right: 10px; bottom: 10px; background: rgba(110,9,20,.92); color: #FFFFFF; font-weight: 800; font-size: clamp(14px, 4.2vw, 17px); line-height: 1.25; padding: 8px 12px; border-radius: 10px; border: 2px solid #FFE08A">📸 ¡Tu familia convertida en personajes navideños!</span>
+<span style="position: absolute; left: 10px; right: 10px; bottom: 10px; background: rgba(110,9,20,.92); color: #FFFFFF; font-weight: 800; font-size: clamp(14px, 4.2vw, 17px); line-height: 1.25; padding: 8px 12px; border-radius: 10px; border: 2px solid #FFE08A">📸 Pon su carita en Papá Noel, el duende, el reno y más</span>
 </div>
-<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; padding: 0 2px 4px"><figure style="margin: 0; display: flex; flex-direction: column; gap: 4px"><img src="kit2.webp" alt="Carta de Papá Noel" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 9px; display: block; border: 2px solid #FFFFFF"><figcaption style="font-size: clamp(10.5px, 2.9vw, 13px); line-height: 1.15; font-weight: 800; color: {RED}">Carta de Papá Noel</figcaption></figure><figure style="margin: 0; display: flex; flex-direction: column; gap: 4px"><img src="deco.webp" alt="Calendario de adviento" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 9px; display: block; border: 2px solid #FFFFFF"><figcaption style="font-size: clamp(10.5px, 2.9vw, 13px); line-height: 1.15; font-weight: 800; color: {RED}">Calendario de adviento</figcaption></figure><figure style="margin: 0; display: flex; flex-direction: column; gap: 4px"><img src="kit1.webp" alt="Detalles para regalar" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 9px; display: block; border: 2px solid #FFFFFF"><figcaption style="font-size: clamp(10.5px, 2.9vw, 13px); line-height: 1.15; font-weight: 800; color: {RED}">Detalles para regalar</figcaption></figure><figure style="margin: 0; display: flex; flex-direction: column; gap: 4px"><img src="actividades.webp" alt="+70 actividades" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 9px; display: block; border: 2px solid #FFFFFF"><figcaption style="font-size: clamp(10.5px, 2.9vw, 13px); line-height: 1.15; font-weight: 800; color: {RED}">+70 actividades</figcaption></figure></div>
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; padding: 0 2px 4px"><figure style="margin: 0; display: flex; flex-direction: column; gap: 4px"><img src="kit2.webp" alt="Carta de Papá Noel" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 9px; display: block; border: 2px solid #FFFFFF"><figcaption style="font-size: clamp(10.5px, 2.9vw, 13px); line-height: 1.15; font-weight: 800; color: {RED}">Carta de Papá Noel</figcaption></figure><figure style="margin: 0; display: flex; flex-direction: column; gap: 4px"><img src="deco.webp" alt="Decoración" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 9px; display: block; border: 2px solid #FFFFFF"><figcaption style="font-size: clamp(10.5px, 2.9vw, 13px); line-height: 1.15; font-weight: 800; color: {RED}">Decoración</figcaption></figure><figure style="margin: 0; display: flex; flex-direction: column; gap: 4px"><img src="kit3.webp" alt="Personajes" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 9px; display: block; border: 2px solid #FFFFFF"><figcaption style="font-size: clamp(10.5px, 2.9vw, 13px); line-height: 1.15; font-weight: 800; color: {RED}">Personajes</figcaption></figure><figure style="margin: 0; display: flex; flex-direction: column; gap: 4px"><img src="actividades.webp" alt="Actividades" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 9px; display: block; border: 2px solid #FFFFFF"><figcaption style="font-size: clamp(10.5px, 2.9vw, 13px); line-height: 1.15; font-weight: 800; color: {RED}">Actividades</figcaption></figure></div>
 </div>
+<div style="display: flex; flex-direction: column; gap: 8px">{btn('QUIERO MI KIT POR US$&nbsp;4,90')}
+<p style="margin: 0; font-size: clamp(12px, 3.4vw, 14px); line-height: 1.45; color: #FFFFFF; font-weight: 600">✅ Garantía de 7 días · ⚡ Acceso inmediato por email · 📄 Producto digital (PDF)</p></div>
 <p style="margin: 4px 0 0; font-size: clamp(17px, 4.6vw, 19px); font-weight: 800; color: #FFFFFF">Esto es lo que recibes hoy:</p>
 <ul style="list-style: none; margin: 0; padding: 16px 14px; display: flex; flex-direction: column; gap: 11px; text-align: left; background: rgba(0,0,0,.18); border: 2px solid #E2B13C; border-radius: 16px; font-size: clamp(18px, 5vw, 21px); line-height: 1.3; font-weight: 800; color: #FFE08A">{hero_list}</ul>
 <p style="margin: 0; font-size: clamp(18px, 5vw, 21px); font-weight: 800; color: #FFFFFF">Compras hoy, imprimes hoy, lo usas hoy.</p>
@@ -197,7 +198,7 @@ body = f'''
 </div>
 </div>
 {btn('SÍ, QUIERO MI KIT AHORA')}
-<div style="background: {GREEN}; color: #FFFFFF; border-radius: 12px; padding: 14px; text-align: center; font-size: 15px; line-height: 1.5"><strong style="color: #FFE08A">ATENCIÓN:</strong> este precio es solo hasta el <strong>14 de diciembre</strong>. El día 15 sube a <strong>US$&nbsp;9,90</strong>.</div>
+<div style="background: {GREEN}; color: #FFFFFF; border-radius: 12px; padding: 14px; text-align: center; font-size: 15px; line-height: 1.5"><strong style="color: #FFE08A">ATENCIÓN:</strong> este precio es solo hasta el <strong>1 de diciembre a las 23:59</strong>. Después sube a <strong>US$&nbsp;9,90</strong>.</div>
 </section>
 
 <!-- 7. BONO -->
@@ -250,7 +251,7 @@ body = f'''
 
 <footer style="padding: 20px 20px 24px; text-align: center; font-size: 13px; color: #5A5145">Producto 100% digital, no se envía nada físico · Soporte: <a href="mailto:mentora.ao@gmail.com" style="color: #A50E1E; font-weight: 700">mentora.ao@gmail.com</a></footer>
 <div class="sticky" style="position: sticky; bottom: 0; background: {GREEN}; padding: 10px 14px; display: flex; gap: 12px; align-items: center; justify-content: space-between; border-top: 3px solid {GOLD}">
-<span style="color: #FFFFFF; font-size: 14px; line-height: 1.3"><s style="color: #F2B8B8">US$&nbsp;97</s> <strong style="font-size: 20px; color: #FFE08A">US$&nbsp;4,90</strong><br>Faltan <span class="cd-d">0</span> días</span>
+<span style="color: #FFFFFF; font-size: 14px; line-height: 1.3"><s style="color: #F2B8B8">US$&nbsp;97</s> <strong style="font-size: 20px; color: #FFE08A">US$&nbsp;4,90</strong><br>⏰ Precio sube el 01/12</span>
 <a class="buy sbtn" href="{CK}" style="background: #12A150; color: #FFFFFF; text-decoration: none; font-weight: 800; font-size: 16px; padding: 14px 18px; border-radius: 12px; white-space: nowrap">COMPRAR AHORA</a>
 </div>
 
@@ -258,7 +259,7 @@ body = f'''
 </div>
 '''
 import re
-names=iter(['hero','personajes','oferta','final','faq','sticky'])
+names=iter(['hero_top','hero','personajes','oferta','final','faq','sticky'])
 body=re.sub(r'<a class="buy', lambda m: f'<a data-pos="{next(names)}" class="buy', body)
 open('index.html', 'w').write(head + body + tail)
 print('ok', len(head + body + tail))

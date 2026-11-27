@@ -87,8 +87,8 @@ GARLAND = ('<svg viewBox="0 0 520 60" style="width: 100%; height: 56px" aria-hid
            '<line x1="360" y1="30" x2="360" y2="40"></line><line x1="460" y1="20" x2="460" y2="30"></line></g><circle cx="60" cy="40" r="11" fill="#D4A53A"></circle><circle cx="160" cy="50" r="9" fill="#FFFFFF"></circle>'
            '<circle cx="260" cy="31" r="12" fill="#2E7D4F"></circle><circle cx="360" cy="50" r="9" fill="#FFFFFF"></circle><circle cx="460" cy="40" r="11" fill="#D4A53A"></circle></svg>')
 
-hero_list = ''.join(check(t) for t in ['Carta de Papá Noel <u>con su nombre</u>', 'Personajes <u>con la cara de tu familia</u>',
-                                       'Calendario de adviento de 24 casitas', '¡Y mucho más!'])
+hero_list = ''.join(check(t) for t in ['Carta de Papá Noel <u>con el nombre de tu hijo</u>', 'Personajes <u>con la cara de tu familia</u>',
+                                       'Calendario de adviento de 24 días', 'Decoración, cajitas y etiquetas', '+70 actividades para niños'])
 
 body = f'''
 <div class="snowg" style="font-family: Inter, system-ui, sans-serif; color: {INK}; width: 100%; padding-bottom: 40px">
@@ -107,23 +107,22 @@ body = f'''
 
 <!-- 1. TOPO -->
 <section class="snow" style="color: #FFFFFF; padding: 0 clamp(14px, 4.6vw, 20px) 34px; display: flex; flex-direction: column; gap: 18px; text-align: center">
-{GARLAND}
-<span style="align-self: center; background: #FFE08A; color: {INK}; font-weight: 800; font-size: 15px; padding: 8px 14px; border-radius: 8px">MAMÁ, ANTES DE GASTAR UNA FORTUNA EN REGALOS, MIRA ESTO&nbsp;↓</span>
-<h1 style="margin: 0; font-size: clamp(27px, 7.6vw, 40px); line-height: 1.08; text-wrap: balance">Con solo <span style="color: #FFE08A">US$&nbsp;4,90</span> y tu impresora, tus hijos van a vivir la Navidad más mágica de su vida</h1>
-<p style="margin: 0; font-size: clamp(17px, 4.6vw, 19px); line-height: 1.45; color: #FFE9E9"><strong style="color: #FFFFFF">+500 imprimibles navideños</strong> listos para usar:</p>
+<span style="align-self: center; margin-top: 14px; background: #FFE08A; color: {INK}; font-weight: 800; font-size: clamp(12.5px, 3.6vw, 14px); padding: 7px 12px; border-radius: 999px">🎄 MAMÁ, ANTES DE GASTAR UNA FORTUNA EN REGALOS…</span>
+<h1 style="margin: 0; display: flex; flex-direction: column; gap: 4px; line-height: 1.04">
+<span style="font-family: 'Lilita One', sans-serif; font-size: clamp(36px, 10.6vw, 60px); color: #FFE08A; white-space: nowrap; text-shadow: 0 4px 0 #6E0914">+500 Imprimibles</span>
+<span style="font-size: clamp(24px, 7vw, 34px); text-wrap: balance">navideños para imprimir en casa por solo <span style="background: #12A150; padding: 0 8px; border-radius: 8px; white-space: nowrap">US$&nbsp;4,90</span></span>
+</h1>
+<div style="position: relative; background: {CREAM}; border: 6px solid {GOLD}; border-radius: 20px; padding: 6px; display: flex; flex-direction: column; gap: 8px; box-shadow: 0 10px 0 rgba(0,0,0,.18)">
+<div style="position: relative">
+<img src="familia.webp" alt="Personajes navideños de papel con las caras de papá, mamá, los niños y la abuela" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 14px; display: block">
+<span style="position: absolute; top: -14px; left: -12px; width: clamp(84px, 24vw, 108px); height: clamp(84px, 24vw, 108px); border-radius: 50%; background: {GOLD}; color: {RED}; border: 4px solid #FFFFFF; display: flex; flex-direction: column; align-items: center; justify-content: center; transform: rotate(-12deg); box-shadow: 0 6px 14px rgba(0,0,0,.3); line-height: 1"><span style="font-family: 'Lilita One', sans-serif; font-size: clamp(26px, 7.4vw, 34px)">6 KITS</span><span style="font-size: clamp(10px, 2.8vw, 12px); font-weight: 800">+ BONO</span></span>
+<span style="position: absolute; left: 10px; right: 10px; bottom: 10px; background: rgba(110,9,20,.92); color: #FFFFFF; font-weight: 800; font-size: clamp(14px, 4.2vw, 17px); line-height: 1.25; padding: 8px 12px; border-radius: 10px; border: 2px solid #FFE08A">📸 ¡Tu familia convertida en personajes navideños!</span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; padding: 0 2px 4px"><figure style="margin: 0; display: flex; flex-direction: column; gap: 4px"><img src="kit2.webp" alt="Carta de Papá Noel" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 9px; display: block; border: 2px solid #FFFFFF"><figcaption style="font-size: clamp(10.5px, 2.9vw, 13px); line-height: 1.15; font-weight: 800; color: {RED}">Carta de Papá Noel</figcaption></figure><figure style="margin: 0; display: flex; flex-direction: column; gap: 4px"><img src="deco.webp" alt="Calendario de adviento" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 9px; display: block; border: 2px solid #FFFFFF"><figcaption style="font-size: clamp(10.5px, 2.9vw, 13px); line-height: 1.15; font-weight: 800; color: {RED}">Calendario de adviento</figcaption></figure><figure style="margin: 0; display: flex; flex-direction: column; gap: 4px"><img src="kit1.webp" alt="Detalles para regalar" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 9px; display: block; border: 2px solid #FFFFFF"><figcaption style="font-size: clamp(10.5px, 2.9vw, 13px); line-height: 1.15; font-weight: 800; color: {RED}">Detalles para regalar</figcaption></figure><figure style="margin: 0; display: flex; flex-direction: column; gap: 4px"><img src="actividades.webp" alt="+70 actividades" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 9px; display: block; border: 2px solid #FFFFFF"><figcaption style="font-size: clamp(10.5px, 2.9vw, 13px); line-height: 1.15; font-weight: 800; color: {RED}">+70 actividades</figcaption></figure></div>
+</div>
+<p style="margin: 4px 0 0; font-size: clamp(17px, 4.6vw, 19px); font-weight: 800; color: #FFFFFF">Esto es lo que recibes hoy:</p>
 <ul style="list-style: none; margin: 0; padding: 16px 14px; display: flex; flex-direction: column; gap: 11px; text-align: left; background: rgba(0,0,0,.18); border: 2px solid #E2B13C; border-radius: 16px; font-size: clamp(18px, 5vw, 21px); line-height: 1.3; font-weight: 800; color: #FFE08A">{hero_list}</ul>
 <p style="margin: 0; font-size: clamp(18px, 5vw, 21px); font-weight: 800; color: #FFFFFF">Compras hoy, imprimes hoy, lo usas hoy.</p>
-<div style="background: {CREAM}; border: 6px solid {GOLD}; border-radius: 18px; padding: 6px; display: flex; flex-direction: column; gap: 6px">
-<div style="position: relative">
-<img src="familia.webp" alt="Personajes navideños de papel con las caras de papá, mamá, los niños y la abuela" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 12px; display: block">
-<span style="position: absolute; left: 10px; right: 10px; bottom: 10px; background: {RED}; color: #FFFFFF; font-weight: 800; font-size: clamp(15px, 4.4vw, 18px); line-height: 1.25; padding: 9px 12px; border-radius: 10px; border: 2px solid #FFE08A">¡Tu familia convertida en personajes navideños!</span>
-</div>
-<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px">
-<img src="kit3.webp" alt="Duende, reno y muñeco de nieve con caras de niños" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 10px; display: block">
-<img src="kit2.webp" alt="Carta de Papá Noel y certificado impresos" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 10px; display: block">
-<img src="deco.webp" alt="Calendario de adviento de casitas y decoración" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 10px; display: block">
-</div>
-</div>
 {btn('QUIERO MI KIT NAVIDEÑO POR US$&nbsp;4,90')}
 <p style="margin: 0; font-size: 14px; color: #FFE9E9">Acceso inmediato por email · Pago único · Garantía de 7 días</p>
 </section>

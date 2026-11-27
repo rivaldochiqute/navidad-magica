@@ -99,7 +99,7 @@ body = f'''
 <span style="background: {RED}; padding: 4px 8px; border-radius: 6px"><span class="cd-h">0</span>h</span>
 <span style="background: {RED}; padding: 4px 8px; border-radius: 6px"><span class="cd-m">0</span>m</span>
 <span style="background: {RED}; padding: 4px 8px; border-radius: 6px"><span class="cd-s">0</span>s</span>
-<span style="color: #FFE08A">· EL PRECIO SUBE A US$&nbsp;9,90 EL [01/12]</span>
+<span style="color: #FFE08A">· EL 15/12 EL PRECIO SUBE A US$&nbsp;9,90</span>
 </div>
 <div class="cane"></div>
 
@@ -198,7 +198,7 @@ body = f'''
 </div>
 </div>
 {btn('SÍ, QUIERO MI KIT AHORA')}
-<div style="background: {GREEN}; color: #FFFFFF; border-radius: 12px; padding: 14px; text-align: center; font-size: 15px; line-height: 1.5"><strong style="color: #FFE08A">ATENCIÓN:</strong> este precio es solo hasta el <strong>[01/12]</strong>. Después sube a <strong>US$&nbsp;9,90</strong>.</div>
+<div style="background: {GREEN}; color: #FFFFFF; border-radius: 12px; padding: 14px; text-align: center; font-size: 15px; line-height: 1.5"><strong style="color: #FFE08A">ATENCIÓN:</strong> este precio es solo hasta el <strong>14 de diciembre</strong>. El día 15 sube a <strong>US$&nbsp;9,90</strong>.</div>
 </section>
 
 <!-- 7. BONO -->
@@ -249,7 +249,7 @@ body = f'''
 <div style="margin-top: 10px; display: flex; flex-direction: column">{btn('QUIERO MI KIT POR US$&nbsp;4,90')}</div>
 </section>
 
-<footer style="padding: 20px 20px 24px; text-align: center; font-size: 13px; color: #5A5145">Producto 100% digital, no se envía nada físico · [Tu email de soporte]</footer>
+<footer style="padding: 20px 20px 24px; text-align: center; font-size: 13px; color: #5A5145">Producto 100% digital, no se envía nada físico · Soporte: <a href="mailto:mentora.ao@gmail.com" style="color: #A50E1E; font-weight: 700">mentora.ao@gmail.com</a></footer>
 <div class="sticky" style="position: sticky; bottom: 0; background: {GREEN}; padding: 10px 14px; display: flex; gap: 12px; align-items: center; justify-content: space-between; border-top: 3px solid {GOLD}">
 <span style="color: #FFFFFF; font-size: 14px; line-height: 1.3"><s style="color: #F2B8B8">US$&nbsp;97</s> <strong style="font-size: 20px; color: #FFE08A">US$&nbsp;4,90</strong><br>Faltan <span class="cd-d">0</span> días</span>
 <a class="buy sbtn" href="{CK}" style="background: #12A150; color: #FFFFFF; text-decoration: none; font-weight: 800; font-size: 16px; padding: 14px 18px; border-radius: 12px; white-space: nowrap">COMPRAR AHORA</a>

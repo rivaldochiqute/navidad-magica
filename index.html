@@ -42,8 +42,19 @@ a,button{-webkit-tap-highlight-color:transparent}
 <script>
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
 fbq('init','1041190532334614');
-fbq('track','PageView');
-fbq('track','ViewContent',{content_name:'Mega Kit Navidad Mágica 2026',content_type:'product',value:4.90,currency:'USD'});
+window.capi=function(name,params){
+  var id=name+'-'+Date.now()+'-'+Math.random().toString(36).slice(2,10);
+  fbq('track',name,params||{},{eventID:id});
+  setTimeout(function(){try{
+    var ck=function(n){var m=document.cookie.match('(^|; )'+n+'=([^;]*)');return m?m[2]:'';};
+    var fbc=ck('_fbc'); var q=new URLSearchParams(location.search).get('fbclid');
+    if(!fbc&&q){fbc='fb.1.'+Date.now()+'.'+q;}
+    fetch('/api/capi',{method:'POST',keepalive:true,headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({event_name:name,event_id:id,url:location.href,fbp:ck('_fbp'),fbc:fbc})}).catch(function(){});
+  }catch(e){}},name==='InitiateCheckout'?0:1500);
+};
+capi('PageView');
+capi('ViewContent',{content_name:'Mega Kit Navidad Mágica 2026',content_type:'product',value:4.90,currency:'USD'});
 </script>
 <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1041190532334614&amp;ev=PageView&amp;noscript=1"></noscript>
 <!-- End Meta Pixel -->
@@ -227,7 +238,7 @@ document.querySelectorAll('a[href*="'+CK+'"]').forEach(function(a){
   if(qs){a.href=a.href+(a.href.indexOf('?')>-1?'&':'?')+qs;}
   a.addEventListener('click',function(){
     var pos=a.getAttribute('data-pos')||'?';
-    if(window.fbq){fbq('track','InitiateCheckout',{content_name:'Mega Kit Navidad Mágica 2026',value:4.90,currency:'USD',num_items:1});
+    if(window.fbq){capi('InitiateCheckout',{content_name:'Mega Kit Navidad Mágica 2026',value:4.90,currency:'USD',num_items:1});
       fbq('trackCustom','ClickBoton',{boton:pos});}
   });
 });

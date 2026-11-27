@@ -10,7 +10,7 @@ document.querySelectorAll('a[href*="'+CK+'"]').forEach(function(a){
   if(qs){a.href=a.href+(a.href.indexOf('?')>-1?'&':'?')+qs;}
   a.addEventListener('click',function(){
     var pos=a.getAttribute('data-pos')||'?';
-    if(window.fbq){fbq('track','InitiateCheckout',{content_name:'Mega Kit Navidad Mágica 2026',value:4.90,currency:'USD',num_items:1});
+    if(window.fbq){capi('InitiateCheckout',{content_name:'Mega Kit Navidad Mágica 2026',value:4.90,currency:'USD',num_items:1});
       fbq('trackCustom','ClickBoton',{boton:pos});}
   });
 });

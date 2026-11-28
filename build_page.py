@@ -71,12 +71,12 @@ def kit_card(n, media, title, desc, chip, bono, valor):
             f'</div></div>')
 
 
-STACK = [('⭐ Mi Familia Navideña: 24 personajes con sus caritas (149 piezas)', 27), ('🎁 Bono 1: Carta y certificado de Papá Noel', 12),
+STACK = [('⭐ Mi Familia Navideña: +140 piezas con sus caritas', 27), ('🎁 Bono 1: Carta y certificado de Papá Noel', 12),
          ('🎁 Bono 2: Calendario de adviento de 24 días', 12), ('🎁 Bono 3: +100 piezas de decoración', 12), ('🎁 Bono 4: +250 detalles para regalar', 15),
          ('🎁 Bono 5: +70 actividades para niños', 9), ('🎁 Bono 6: Guía para vender tus detalles', 10)]
 
 FAQ = [
-    ('¿Cómo recibo el material?', 'Al instante, en tu correo electrónico, apenas se confirme el pago. Recibes el producto principal (24 personajes con 149 piezas) y los 6 bonos, todo en PDF y en tamaño Carta y A4.'),
+    ('¿Cómo recibo el material?', 'Al instante, en tu correo electrónico, apenas se confirme el pago. Recibes más de 600 imprimibles: el producto principal (+140 piezas con la cara de tu familia) y los 6 bonos, todo en PDF y en tamaño Carta y A4.'),
     ('¿Necesito una impresora especial?', 'No. Funciona con cualquier impresora de casa, o puedes imprimir en una papelería. Viene en tamaño Carta y A4.'),
     ('¿Cómo pongo el nombre de mi hijo y la cara de mi familia?', 'El nombre lo escribes directamente en el PDF de la carta y el certificado (en la computadora o el celular, con Adobe Acrobat Reader gratis) y luego imprimes. Para los personajes, imprimes una foto de cada uno, la recortas con el molde que viene en el kit y la pegas en el espacio marcado.'),
     ('¿Puedo imprimir más de una vez?', 'Sí, todas las veces que quieras, para usar este año y los siguientes.'),
@@ -98,8 +98,8 @@ GARLAND = ('<svg viewBox="0 0 520 60" style="width: 100%; height: 56px" aria-hid
            '<line x1="360" y1="30" x2="360" y2="40"></line><line x1="460" y1="20" x2="460" y2="30"></line></g><circle cx="60" cy="40" r="11" fill="#D4A53A"></circle><circle cx="160" cy="50" r="9" fill="#FFFFFF"></circle>'
            '<circle cx="260" cy="31" r="12" fill="#2E7D4F"></circle><circle cx="360" cy="50" r="9" fill="#FFFFFF"></circle><circle cx="460" cy="40" r="11" fill="#D4A53A"></circle></svg>')
 
-hero_list = ''.join(check(t) for t in ['<u>24 personajes</u> para poner la cara de tu familia', 'Esferas, toppers, etiquetas, tarjetas y nacimiento <u>con sus caritas</u>',
-                                       '🎁 6 bonos: carta de Papá Noel, calendario de adviento, decoración y más'])
+hero_list = ''.join(check(t) for t in ['<u>+140 piezas con la cara de tu familia</u>: personajes, esferas, toppers y nacimiento', 'Carta de Papá Noel <u>con el nombre de tu hijo</u>',
+                                       'Calendario de adviento de 24 días', '+100 piezas de decoración y +250 detalles para regalar', '+70 actividades para niños'])
 
 body = f'''
 <div class="snowg" style="font-family: Inter, system-ui, sans-serif; color: {INK}; width: 100%; padding-bottom: 40px">
@@ -120,12 +120,12 @@ body = f'''
 <span style="align-self: center; margin-top: 14px; background: #FFE08A; color: {INK}; font-weight: 800; font-size: clamp(12.5px, 3.6vw, 14px); padding: 7px 12px; border-radius: 999px">🎄 MAMÁ, ANTES DE GASTAR UNA FORTUNA EN REGALOS, MIRA ESTO 👇</span>
 <h1 style="margin: 0; display: flex; flex-direction: column; gap: 4px; line-height: 1.04">
 <span style="font-family: 'Lilita One', sans-serif; font-size: clamp(34px, 9.6vw, 54px); color: #FFE08A; text-wrap: balance; text-shadow: 0 4px 0 #6E0914">Convierte a tu familia en personajes navideños</span>
-<span style="font-size: clamp(21px, 6vw, 30px); text-wrap: balance">24 personajes + 6 bonos de regalo por solo <span style="background: #12A150; padding: 0 8px; border-radius: 8px; white-space: nowrap">US$&nbsp;4,90</span></span>
+<span style="font-size: clamp(21px, 6vw, 30px); text-wrap: balance">+600 imprimibles para imprimir en casa por solo <span style="background: #12A150; padding: 0 8px; border-radius: 8px; white-space: nowrap">US$&nbsp;4,90</span></span>
 </h1>
 <div style="position: relative; background: {CREAM}; border: 6px solid {GOLD}; border-radius: 20px; padding: 6px; display: flex; flex-direction: column; gap: 8px; box-shadow: 0 10px 0 rgba(0,0,0,.18)">
 <div style="position: relative">
 <img src="familia.webp" alt="Personajes navideños de papel con las caras de papá, mamá, los niños y la abuela" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 14px; display: block">
-<span style="position: absolute; top: -14px; left: -12px; width: clamp(84px, 24vw, 108px); height: clamp(84px, 24vw, 108px); border-radius: 50%; background: {GOLD}; color: {RED}; border: 4px solid #FFFFFF; display: flex; flex-direction: column; align-items: center; justify-content: center; transform: rotate(-12deg); box-shadow: 0 6px 14px rgba(0,0,0,.3); line-height: 1"><span style="font-family: 'Lilita One', sans-serif; font-size: clamp(30px, 8.4vw, 40px)">24</span><span style="font-size: clamp(9.5px, 2.6vw, 11.5px); font-weight: 800">PERSONAJES</span></span>
+<span style="position: absolute; top: -14px; left: -12px; width: clamp(84px, 24vw, 108px); height: clamp(84px, 24vw, 108px); border-radius: 50%; background: {GOLD}; color: {RED}; border: 4px solid #FFFFFF; display: flex; flex-direction: column; align-items: center; justify-content: center; transform: rotate(-12deg); box-shadow: 0 6px 14px rgba(0,0,0,.3); line-height: 1"><span style="font-family: 'Lilita One', sans-serif; font-size: clamp(26px, 7.4vw, 36px)">+600</span><span style="font-size: clamp(9.5px, 2.6vw, 11.5px); font-weight: 800">IMPRIMIBLES</span></span>
 <span style="position: absolute; left: 10px; right: 10px; bottom: 10px; background: rgba(110,9,20,.92); color: #FFFFFF; font-weight: 800; font-size: clamp(14px, 4.2vw, 17px); line-height: 1.25; padding: 8px 12px; border-radius: 10px; border: 2px solid #FFE08A">📸 Pon su carita en Papá Noel, el duende, el reno y más</span>
 </div>
 <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; padding: 0 2px 4px"><figure style="margin: 0; display: flex; flex-direction: column; gap: 4px"><img src="kit2.webp" alt="Carta de Papá Noel" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 9px; display: block; border: 2px solid #FFFFFF"><figcaption style="font-size: clamp(10.5px, 2.9vw, 13px); line-height: 1.15; font-weight: 800; color: {RED}">Carta de Papá Noel</figcaption></figure><figure style="margin: 0; display: flex; flex-direction: column; gap: 4px"><img src="deco.webp" alt="Decoración" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 9px; display: block; border: 2px solid #FFFFFF"><figcaption style="font-size: clamp(10.5px, 2.9vw, 13px); line-height: 1.15; font-weight: 800; color: {RED}">Decoración</figcaption></figure><figure style="margin: 0; display: flex; flex-direction: column; gap: 4px"><img src="kit3.webp" alt="Personajes" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 9px; display: block; border: 2px solid #FFFFFF"><figcaption style="font-size: clamp(10.5px, 2.9vw, 13px); line-height: 1.15; font-weight: 800; color: {RED}">Personajes</figcaption></figure><figure style="margin: 0; display: flex; flex-direction: column; gap: 4px"><img src="actividades.webp" alt="Actividades" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 9px; display: block; border: 2px solid #FFFFFF"><figcaption style="font-size: clamp(10.5px, 2.9vw, 13px); line-height: 1.15; font-weight: 800; color: {RED}">Actividades</figcaption></figure></div>
@@ -152,7 +152,7 @@ body = f'''
 <section style="{PAD}; display: flex; flex-direction: column; gap: 16px; text-align: center">
 <p style="margin: 0; font-family: 'Mountains of Christmas', serif; font-size: 28px; color: {GOLD}">Por eso creamos el</p>
 <h2 style="{H2}; color: {RED}">Mi Familia Navideña 2026</h2>
-<p style="margin: 0; font-size: 17px; line-height: 1.6">24 personajes navideños para poner la cara de cada miembro de tu familia, más 6 bonos para vivir toda la Navidad. Con tu impresora de casa creas momentos que tus hijos nunca van a olvidar. <strong>Sin gastar de más y sin saber nada de diseño.</strong></p>
+<p style="margin: 0; font-size: 17px; line-height: 1.6">Más de 600 imprimibles: +140 piezas para poner la cara de cada miembro de tu familia y 6 bonos para vivir toda la Navidad. Con tu impresora de casa creas momentos que tus hijos nunca van a olvidar. <strong>Sin gastar de más y sin saber nada de diseño.</strong></p>
 <p style="margin: 6px 0 0; font-size: 18px; font-weight: 800; color: {GREEN}">Imagina su carita cuando…</p>
 <div style="display: flex; flex-direction: column; gap: 10px; text-align: left">
 <div style="background: #FFFFFF; border: 2px solid #E9D6AE; border-radius: 12px; padding: 14px 16px; font-size: 16px; line-height: 1.45"><span style="color: {GOLD}">★</span> Abren una <strong>carta de Papá Noel con su nombre</strong> y su certificado de niño bueno</div>
@@ -172,7 +172,7 @@ body = f'''
 <div style="background: rgba(0,0,0,.2); border: 2px solid {GOLD}; border-radius: 12px; padding: 10px; display: flex; flex-direction: column; justify-content: center; gap: 6px; font-weight: 800; font-size: clamp(14px, 4vw, 16px); line-height: 1.3; text-align: left">
 <span>✂️ 1. Imprime el personaje</span><span>📸 2. Recorta la foto de su cara</span><span>✨ 3. Pégala ¡y listo!</span></div>
 </div>
-<p style="margin: 0; font-size: 16px; line-height: 1.55; color: #FFE9E9"><strong style="color: #FFFFFF">24 personajes:</strong> Papá Noel, Mamá Noel, duende, duende niña, reno, muñeco de nieve, osito polar, pingüino, galleta de jengibre, ángel, princesa de hielo, cascanueces, perrito, gatito, arbolito, los 3 Reyes Magos y un nacimiento completo con María, José, el Niño, el pastorcito, la ovejita y el burrito.</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.55; color: #FFE9E9"><strong style="color: #FFFFFF">+140 piezas con 24 personajes:</strong> Papá Noel, Mamá Noel, duende, duende niña, reno, muñeco de nieve, osito polar, pingüino, galleta de jengibre, ángel, princesa de hielo, cascanueces, perrito, gatito, arbolito, los 3 Reyes Magos y un nacimiento completo con María, José, el Niño, el pastorcito, la ovejita y el burrito.</p>
 <p style="margin: 0; font-size: 18px; font-weight: 800; color: #FFE08A">Y con sus caritas también: esferas para el árbol, toppers para el pastel, etiquetas de regalo, tarjetas y un marco para la foto familiar.</p>
 {btn('QUIERO CONVERTIR A MI FAMILIA EN PERSONAJES')}
 </section>
@@ -183,16 +183,16 @@ body = f'''
 <h2 style="{H2}; color: #FFFFFF; margin-bottom: 4px">Esto es todo lo que recibes</h2>
 <div style="background: {CREAM}; border-radius: 18px; padding: 14px; display: flex; flex-direction: column; gap: 12px; border: 4px solid {GOLD}; box-shadow: 0 8px 0 rgba(0,0,0,.2)">
 <span style="align-self: flex-start; background: {RED}; color: #FFFFFF; font-weight: 800; font-size: 13px; padding: 5px 11px; border-radius: 999px">⭐ PRODUCTO PRINCIPAL</span>
-<h3 style="margin: 0; font-family: 'Lilita One', sans-serif; font-weight: 400; font-size: clamp(26px, 7.4vw, 34px); line-height: 1.05; color: {RED}">Mi Familia Navideña: 24 personajes con la cara de tu familia</h3>
+<h3 style="margin: 0; font-family: 'Lilita One', sans-serif; font-weight: 400; font-size: clamp(26px, 7.4vw, 34px); line-height: 1.05; color: {RED}">Mi Familia Navideña: +140 piezas con la cara de tu familia</h3>
 <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px"><img src="familia.webp" alt="Personajes con las caras de la familia" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 12px; display: block"><img src="personajes24.webp" alt="Personajes del kit" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 12px; display: block"></div>
 <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; font-size: 15.5px; line-height: 1.35; font-weight: 600">
 {''.join(check(t, GREEN, '#FFFFFF', '15.5px') for t in PRINCIPAL)}
 </ul>
-<span style="align-self: flex-start; background: {GREEN}; color: #FFE08A; font-size: 13px; font-weight: 800; padding: 5px 10px; border-radius: 999px">149 piezas · guía y moldes para recortar las caras</span>
+<span style="align-self: flex-start; background: {GREEN}; color: #FFE08A; font-size: 13px; font-weight: 800; padding: 5px 10px; border-radius: 999px">24 personajes · guía y moldes para recortar las caras</span>
 </div>
 <div style="text-align: center; margin-top: 10px; display: flex; flex-direction: column; gap: 4px">
 <span style="font-family: 'Mountains of Christmas', serif; font-size: 28px; color: #FFE08A">y además, de regalo…</span>
-<h2 style="{H2}; color: #FFFFFF">6 bonos para vivir toda la Navidad</h2>
+<h2 style="{H2}; color: #FFFFFF">6 bonos con +500 imprimibles más</h2>
 </div>
 {''.join(kit_card(i, *k) for i, k in enumerate(KITS))}
 </section>

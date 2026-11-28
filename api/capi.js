@@ -18,7 +18,7 @@ module.exports = async (req, res) => {
     event_name: b.event_name, event_time: Math.floor(Date.now() / 1000), event_id: String(b.event_id).slice(0, 100),
     action_source: 'website', event_source_url: String(b.url || '').slice(0, 1000), user_data,
   };
-  if (b.event_name !== 'PageView') ev.custom_data = { content_name: 'Mega Kit Navidad Mágica 2026', content_type: 'product', value: 4.9, currency: 'USD' };
+  if (b.event_name !== 'PageView') ev.custom_data = { content_name: 'Mi Familia Navideña 2026', content_type: 'product', value: 4.9, currency: 'USD' };
   try {
     const r = await fetch(`https://graph.facebook.com/v21.0/${PIXEL}/events?access_token=${encodeURIComponent(token)}`, {
       method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ data: [ev] }),
